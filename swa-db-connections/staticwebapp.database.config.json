@@ -1,0 +1,216 @@
+{
+  "$schema": "https://github.com/Azure/data-api-builder/releases/download/v1.1.7/dab.draft.schema.json",
+  "data-source": {
+    "database-type": "mssql",
+    "connection-string": "",
+    "options": {
+      "set-session-context": false
+    }
+  },
+  "runtime": {
+    "rest": {
+      "enabled": true,
+      "path": "/rest",
+      "request-body-strict": true
+    },
+    "graphql": {
+      "enabled": true,
+      "path": "/graphql",
+      "allow-introspection": true
+    },
+    "host": {
+      "cors": {
+        "origins": [],
+        "allow-credentials": false
+      },
+      "authentication": {
+        "provider": "StaticWebApps"
+      },
+      "mode": "production"
+    }
+  },
+  "entities": {
+    "regions": {
+      "source": {
+        "object": "dbo.regions",
+        "type": "table"
+      },
+      "graphql": {
+        "enabled": true,
+        "type": {
+          "singular": "regions",
+          "plural": "regions"
+        }
+      },
+      "rest": {
+        "enabled": true
+      },
+      "permissions": [
+        {
+          "role": "anonymous",
+          "actions": [
+            {
+              "action": "*"
+            }
+          ]
+        }
+      ]
+    },
+    "countries": {
+      "source": {
+        "object": "dbo.countries",
+        "type": "table"
+      },
+      "graphql": {
+        "enabled": true,
+        "type": {
+          "singular": "countries",
+          "plural": "countries"
+        }
+      },
+      "rest": {
+        "enabled": true
+      },
+      "permissions": [
+        {
+          "role": "anonymous",
+          "actions": [
+            {
+              "action": "*"
+            }
+          ]
+        }
+      ]
+    },
+    "locations": {
+      "source": {
+        "object": "dbo.locations",
+        "type": "table"
+      },
+      "graphql": {
+        "enabled": true,
+        "type": {
+          "singular": "locations",
+          "plural": "locations"
+        }
+      },
+      "rest": {
+        "enabled": true
+      },
+      "permissions": [
+        {
+          "role": "anonymous",
+          "actions": [
+            {
+              "action": "*"
+            }
+          ]
+        }
+      ]
+    },
+    "jobs": {
+      "source": {
+        "object": "dbo.jobs",
+        "type": "table"
+      },
+      "graphql": {
+        "enabled": true,
+        "type": {
+          "singular": "jobs",
+          "plural": "jobs"
+        }
+      },
+      "rest": {
+        "enabled": true
+      },
+      "permissions": [
+        {
+          "role": "anonymous",
+          "actions": [
+            {
+              "action": "*"
+            }
+          ]
+        }
+      ]
+    },
+    "departments": {
+      "source": {
+        "object": "dbo.departments",
+        "type": "table"
+      },
+      "graphql": {
+        "enabled": true,
+        "type": {
+          "singular": "departments",
+          "plural": "departments"
+        }
+      },
+      "rest": {
+        "enabled": true
+      },
+      "permissions": [
+        {
+          "role": "anonymous",
+          "actions": [
+            {
+              "action": "*"
+            }
+          ]
+        }
+      ]
+    },
+    "employees": {
+      "source": {
+        "object": "dbo.employees",
+        "type": "table"
+      },
+      "graphql": {
+        "enabled": true,
+        "type": {
+          "singular": "employees",
+          "plural": "employees"
+        }
+      },
+      "rest": {
+        "enabled": true
+      },
+      "permissions": [
+        {
+          "role": "anonymous",
+          "actions": [
+            {
+              "action": "*"
+            }
+          ]
+        }
+      ]
+    },
+    "dependents": {
+      "source": {
+        "object": "dbo.dependents",
+        "type": "table"
+      },
+      "graphql": {
+        "enabled": true,
+        "type": {
+          "singular": "dependents",
+          "plural": "dependents"
+        }
+      },
+      "rest": {
+        "enabled": true
+      },
+      "permissions": [
+        {
+          "role": "anonymous",
+          "actions": [
+            {
+              "action": "*"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
