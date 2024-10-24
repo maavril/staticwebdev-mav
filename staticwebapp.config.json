@@ -1,1 +1,17 @@
-{}
+{
+  "routes": [
+    {
+      "route": "/data-api",
+      "methods": [
+        "get",
+        "post",
+        "put",
+        "delete",
+        "patch"
+      ],
+      "allowedRoles": [
+        "anonymous"
+      ]
+    }
+  ]
+}
